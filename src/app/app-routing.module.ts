@@ -13,6 +13,10 @@ const routes: Routes = [
  component:RegisterComponent 
 },
 {
+  path:'admin',
+  loadChildren:()=>import('./admin/admin.module').then(mod=>mod.AdminModule)
+},
+{
   path:'',
   pathMatch:'full',
   redirectTo:'/login'
