@@ -1,0 +1,45 @@
+<div *ngIf='showError' #alert class="alert m-2 alert-danger fixed-top alert-dismissible fade show" role="alert">
+    <button type="button" class="close" aria-label="Close" (click)="closeAlert()">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    {{ errorMessage }}
+</div>
+
+<div class="body-form register" [ngClass]="{'loading': loading}">
+    <main class="form-signin">
+        <form #formData='ngForm' (ngSubmit)="daftar(formData)">
+        <h1 class="h3 mb-3 fw-bold text-center">My Course</h1>
+        <h3 class="h5 mb-3 fw-normal text-center mb-5">Masukkan data anda dengan benar :</h3>
+    
+        <div class="row g-3">
+
+            <div class="col-12 mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="username" class="form-control"  name="username" id="username" placeholder="Masukkan username" [(ngModel)]="data.username" required>
+            </div>
+
+            <div class="col-12 mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" name="email"  id="email" placeholder="Masukkan email" [(ngModel)]="data.email" required>
+                </div>
+
+            <div class="col-12 mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" name="password"  id="password" placeholder="********" [(ngModel)]="data.password" required>
+            </div>
+
+            <div class="col-12 mb-3">
+                <label for="phone" class="form-label">No Telepon</label>
+                <input type="number" class="form-control" name="phone"  id="phone" placeholder="62892-2223-12xx" [(ngModel)]="data.phone" required>
+            </div>
+
+        </div>
+    
+        <button class="w-100 btn btn-lg btn-primary mt-5" type="submit" [disabled]="!formData.valid">Daftar</button>
+        
+        <div class="text-center">
+            <button type="button" class="btn btn-link mt-2" routerLink="/auth/login">Sudah punya akun ?</button>
+        </div>
+    </form>
+  </main>
+</div>

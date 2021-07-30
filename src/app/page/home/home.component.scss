@@ -1,0 +1,14 @@
+@media (min-width: 768px) {
+  .sidebar {
+    border-top: 1px solid #dee2e6 !important;
+    margin-top: 4rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .sidebar {
+    border-left: 1px solid #dee2e6 !important;
+    border-top: none !important;
+    margin-top: 0 !important;
+  }
+}

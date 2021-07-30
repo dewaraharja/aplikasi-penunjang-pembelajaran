@@ -1,0 +1,30 @@
+
+<div class="container mt-4">
+    <div class="row  justify-content-center">
+      <div class="col-lg-8 col-md-12">
+        <h4 class="pb-2">List Courses</h4>
+        <div *ngIf="!isEmpty" class="row my-2">
+          <div class="col-md-4 col-sm-6" *ngFor="let dt of listData;">
+
+                <div class="card m-2 cursor-pointer card-course" (click)="getCourse(dt.payload.doc.id)">
+                    <img class="card-img-top" [src]="dt.payload.doc.data().image_url" alt="">
+                    <div class="card-body">
+                      <h5 class="card-title">{{ dt.payload.doc.data().name }}</h5>
+                      <p class="card-text">Rp {{ dt.payload.doc.data().price }}.</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+      </div>
+      
+      <div class="col-lg-2">
+        <div class="position-sticky" style="top: 2rem;">
+          <div class="p-2 text-right sidebar">
+            <h4 class=" pb-2">Tell me here</h4>
+            <p>Hello</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

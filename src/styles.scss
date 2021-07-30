@@ -1,1 +1,49 @@
-/* You can add global styles to this file, and also import other style files */
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
+
+body {
+  margin: 0;
+  color: #000 !important;
+  height: 100%;
+}
+
+.fw-bold {
+  font-weight: bold !important;
+}
+
+.btn {
+  &:focus {
+    box-shadow: none !important;
+  }
+}
+
+.active {
+  font-weight: bold;
+}
+
+.card-course {
+  transition: transform 0.3s cubic-bezier(0.34, 2, 0.6, 1), box-shadow 0.2s ease;
+  &:hover {
+    cursor: pointer !important;
+    transform: scale(1.02);
+  }
+}
+
+@media (min-width: 576px) {
+  .ms-sm-auto {
+    margin-left: auto !important;
+  }
+}
+
+h2,
+.h2 {
+  font-weight: 300 !important;
+}
+
+.loading {
+  opacity: 0.2 !important;
+}
+
+.cursor-pointer:hover {
+  cursor: pointer !important;
+}
